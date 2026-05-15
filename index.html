@@ -1,187 +1,221 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Outfit:wght@300;400&display=swap');
-.w*{box-sizing:border-box;margin:0;padding:0}
-.w{font-family:'Outfit',sans-serif;background:#faf8f5;color:#1c1c1a}
-.w-nav{display:flex;justify-content:space-between;align-items:center;padding:0 48px;height:58px;background:rgba(250,248,245,0.96);border-bottom:0.5px solid rgba(0,0,0,0.07)}
-.w-logo{font-family:'Cormorant',serif;font-size:16px;font-weight:400;letter-spacing:2px;color:#1c1c1a}
-.w-nav-right{display:flex;align-items:center;gap:20px}
-.w-lang{display:flex;gap:6px}
-.w-lang-btn{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;padding:4px 6px;transition:color 0.2s}
-.w-lang-btn.active{color:#8c7a65;border-bottom:0.5px solid #8c7a65}
-.w-lang-sep{font-size:10px;color:#ddd;padding-top:4px}
-.w-nav-cta{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8c7a65;font-weight:400;cursor:pointer;border:none;background:none;font-family:'Outfit',sans-serif}
-.w-hero{position:relative;height:520px;overflow:hidden}
-.w-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1400&q=85&auto=format&fit=crop') center 30%/cover no-repeat}
-.w-hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,8,6,0.72) 0%,rgba(10,8,6,0.3) 55%,rgba(10,8,6,0.1) 100%)}
-.w-hero-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 56px;max-width:600px}
-.w-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:20px;font-weight:300}
-.w-hero h1{font-family:'Cormorant',serif;font-size:62px;font-weight:300;line-height:1.05;color:#fff;margin-bottom:24px}
-.w-hero h1 em{font-style:italic;color:#e8d5bc}
-.w-hero-sub{font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:36px;max-width:360px}
-.w-hero-btn{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fff;border:0.5px solid rgba(255,255,255,0.45);padding:13px 28px;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:300}
-.w-bridge{padding:72px 56px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-bottom:0.5px solid rgba(0,0,0,0.07)}
-.w-bridge-left{font-family:'Cormorant',serif;font-size:38px;font-weight:300;line-height:1.2;color:#1c1c1a}
-.w-bridge-left em{font-style:italic;color:#8c7a65}
-.w-bridge-right{font-size:14px;font-weight:300;color:#6b6560;line-height:1.9}
-.w-bridge-right p{margin-bottom:16px}
-.w-gallery{display:grid;grid-template-columns:1.3fr 0.85fr 0.85fr;height:420px;gap:3px}
-.w-gimg{overflow:hidden}
-.w-gimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.8s ease}
-.w-gimg:hover img{transform:scale(1.04)}
-.w-pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:0.5px solid rgba(0,0,0,0.07);border-bottom:0.5px solid rgba(0,0,0,0.07)}
-.w-pillar{padding:52px 44px;border-right:0.5px solid rgba(0,0,0,0.07)}
-.w-pillar:last-child{border-right:none}
-.w-pillar-word{font-family:'Cormorant',serif;font-size:34px;font-weight:300;font-style:italic;color:#8c7a65;margin-bottom:14px;display:block}
-.w-pillar-text{font-size:13px;font-weight:300;color:#6b6560;line-height:1.8}
-.w-quote{padding:80px 56px;text-align:center;background:#f3ede4}
-.w-quote-text{font-family:'Cormorant',serif;font-size:30px;font-weight:300;font-style:italic;color:#1c1c1a;line-height:1.45;max-width:560px;margin:0 auto 20px}
-.w-quote-attr{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8c7a65;font-weight:300}
-.w-form-wrap{padding:80px 56px}
-.w-form-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8c7a65;margin-bottom:14px;font-weight:300}
-.w-form-title{font-family:'Cormorant',serif;font-size:44px;font-weight:300;line-height:1.15;color:#1c1c1a;margin-bottom:10px}
-.w-form-title em{font-style:italic}
-.w-form-sub{font-size:13px;color:#6b6560;font-weight:300;margin-bottom:48px;line-height:1.7}
-.w-prog{display:flex;gap:6px;margin-bottom:40px}
-.w-prog-bar{height:1px;flex:1;background:rgba(0,0,0,0.12);transition:background 0.5s}
-.w-prog-bar.on{background:#8c7a65}
-.w-panel{display:none}
-.w-panel.on{display:block}
-.w-q{font-family:'Cormorant',serif;font-size:26px;font-weight:300;color:#1c1c1a;margin-bottom:28px;line-height:1.3}
-.w-opts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
-.w-opt{font-size:12px;font-weight:300;color:#555;border:0.5px solid rgba(0,0,0,0.2);background:#fff;padding:11px 22px;cursor:pointer;transition:all 0.2s;font-family:'Outfit',sans-serif}
-.w-opt.on{border-color:#8c7a65;color:#8c7a65;background:rgba(140,122,101,0.05)}
-.w-inp{width:100%;border:none;border-bottom:0.5px solid rgba(0,0,0,0.18);background:transparent;padding:13px 0;font-size:15px;font-weight:300;color:#1c1c1a;font-family:'Outfit',sans-serif;margin-bottom:24px;outline:none}
-.w-inp::placeholder{color:#bbb}
-.w-inp:focus{border-bottom-color:#8c7a65}
-.w-foot{display:flex;justify-content:space-between;align-items:center}
-.w-back{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
-.w-next{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#faf8f5;background:#1c1c1a;border:none;padding:14px 32px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:300;transition:background 0.2s}
-.w-next:hover{background:#8c7a65}
-.w-confirm{display:none;text-align:center;padding:40px 0}
-.w-confirm.on{display:block}
-.w-confirm-icon{font-size:32px;color:#8c7a65;margin-bottom:20px}
-.w-confirm h3{font-family:'Cormorant',serif;font-size:30px;font-weight:300;color:#1c1c1a;margin-bottom:10px}
-.w-confirm p{font-size:13px;color:#6b6560;font-weight:300;line-height:1.7}
-.w-footer{padding:36px 56px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid rgba(0,0,0,0.07)}
-.w-footer-logo{font-family:'Cormorant',serif;font-size:14px;font-weight:300;letter-spacing:1.5px}
-.w-footer-copy{font-size:11px;color:#bbb;font-weight:300}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Outfit',sans-serif;background:#faf8f5;color:#1c1c1a}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:0 40px;height:56px;background:rgba(250,248,245,0.97);border-bottom:0.5px solid rgba(0,0,0,0.07);position:sticky;top:0;z-index:100}
+.logo{font-family:'Cormorant',serif;font-size:15px;font-weight:400;letter-spacing:1.5px}
+.nav-right{display:flex;align-items:center;gap:16px}
+.lang{display:flex;gap:4px;align-items:center}
+.lb{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif;padding:4px 6px;transition:color 0.2s}
+.lb.active{color:#8c7a65;border-bottom:0.5px solid #8c7a65}
+.ls{font-size:10px;color:#ddd}
+.nav-cta{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8c7a65;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
+
+/* HERO */
+.hero{position:relative;height:90vh;min-height:500px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1400&q=85&auto=format&fit=crop') center 30%/cover no-repeat}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,8,6,0.75) 0%,rgba(10,8,6,0.35) 60%,rgba(10,8,6,0.1) 100%)}
+.hero-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 64px}
+.hero-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:18px;font-weight:300}
+.hero h1{font-family:'Cormorant',serif;font-size:clamp(42px,7vw,72px);font-weight:300;line-height:1.05;color:#fff;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:#e8d5bc}
+.hero-sub{font-size:14px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:32px;max-width:400px}
+.hero-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#fff;border:0.5px solid rgba(255,255,255,0.4);padding:12px 24px;background:transparent;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:300;transition:background 0.3s;width:fit-content}
+.hero-btn:hover{background:rgba(255,255,255,0.08)}
+
+/* BRIDGE */
+.bridge{padding:64px 48px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;border-bottom:0.5px solid rgba(0,0,0,0.07)}
+.bridge-left{font-family:'Cormorant',serif;font-size:clamp(28px,4vw,40px);font-weight:300;line-height:1.2}
+.bridge-left em{font-style:italic;color:#8c7a65}
+.bridge-right{font-size:14px;font-weight:300;color:#6b6560;line-height:1.9}
+.bridge-right p{margin-bottom:14px}
+.bridge-right p:last-child{margin-bottom:0}
+
+/* GALLERY */
+.gallery{display:grid;grid-template-columns:1.3fr 0.85fr 0.85fr;height:420px;gap:3px}
+.gimg{overflow:hidden}
+.gimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.8s ease}
+.gimg:hover img{transform:scale(1.04)}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:0.5px solid rgba(0,0,0,0.07);border-bottom:0.5px solid rgba(0,0,0,0.07)}
+.pillar{padding:48px 40px;border-right:0.5px solid rgba(0,0,0,0.07)}
+.pillar:last-child{border-right:none}
+.pillar-word{font-family:'Cormorant',serif;font-size:32px;font-weight:300;font-style:italic;color:#8c7a65;margin-bottom:12px;display:block}
+.pillar-text{font-size:13px;font-weight:300;color:#6b6560;line-height:1.8}
+
+/* QUOTE */
+.quote{padding:72px 48px;text-align:center;background:#f3ede4}
+.quote-text{font-family:'Cormorant',serif;font-size:clamp(22px,3vw,30px);font-weight:300;font-style:italic;color:#1c1c1a;line-height:1.45;max-width:540px;margin:0 auto 16px}
+.quote-attr{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8c7a65;font-weight:300}
+
+/* FORM */
+.form-wrap{padding:72px 48px}
+.form-eye{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8c7a65;margin-bottom:12px;font-weight:300}
+.form-title{font-family:'Cormorant',serif;font-size:clamp(32px,4vw,44px);font-weight:300;line-height:1.15;color:#1c1c1a;margin-bottom:10px}
+.form-title em{font-style:italic}
+.form-sub{font-size:13px;color:#6b6560;font-weight:300;margin-bottom:44px;line-height:1.7;max-width:480px}
+.prog{display:flex;gap:6px;margin-bottom:36px}
+.pbar{height:1px;flex:1;background:rgba(0,0,0,0.12);transition:background 0.5s}
+.pbar.on{background:#8c7a65}
+.panel{display:none}
+.panel.on{display:block}
+.fq{font-family:'Cormorant',serif;font-size:24px;font-weight:300;color:#1c1c1a;margin-bottom:24px;line-height:1.3}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.opt{font-size:12px;font-weight:300;color:#555;border:0.5px solid rgba(0,0,0,0.2);background:#fff;padding:10px 20px;cursor:pointer;transition:all 0.2s;font-family:'Outfit',sans-serif}
+.opt.on{border-color:#8c7a65;color:#8c7a65;background:rgba(140,122,101,0.05)}
+.inp{width:100%;border:none;border-bottom:0.5px solid rgba(0,0,0,0.18);background:transparent;padding:12px 0;font-size:15px;font-weight:300;color:#1c1c1a;font-family:'Outfit',sans-serif;margin-bottom:22px;outline:none}
+.inp::placeholder{color:#bbb}
+.inp:focus{border-bottom-color:#8c7a65}
+.ffoot{display:flex;justify-content:space-between;align-items:center}
+.fbk{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bbb;background:none;border:none;cursor:pointer;font-family:'Outfit',sans-serif}
+.fnx{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#faf8f5;background:#1c1c1a;border:none;padding:13px 28px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:300;transition:background 0.2s}
+.fnx:hover{background:#8c7a65}
+.confirm{display:none;text-align:center;padding:40px 0}
+.confirm.on{display:block}
+.confirm-icon{font-size:32px;color:#8c7a65;margin-bottom:16px}
+.confirm h3{font-family:'Cormorant',serif;font-size:28px;font-weight:300;color:#1c1c1a;margin-bottom:8px}
+.confirm p{font-size:13px;color:#6b6560;font-weight:300;line-height:1.7}
+
+/* FOOTER */
+footer{padding:32px 48px;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid rgba(0,0,0,0.07)}
+.footer-logo{font-family:'Cormorant',serif;font-size:14px;font-weight:300;letter-spacing:1.5px}
+.footer-copy{font-size:11px;color:#bbb;font-weight:300}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:0 20px;height:52px}
+  .logo{font-size:13px}
+  .nav-cta{display:none}
+  .hero-content{padding:0 24px 48px}
+  .hero-eye{display:none}
+  .hero-sub{font-size:13px;max-width:100%}
+  .bridge{grid-template-columns:1fr;gap:32px;padding:48px 24px}
+  .gallery{grid-template-columns:1fr;height:auto}
+  .gimg{height:260px}
+  .gimg:nth-child(2),.gimg:nth-child(3){display:none}
+  .pillars{grid-template-columns:1fr}
+  .pillar{border-right:none;border-bottom:0.5px solid rgba(0,0,0,0.07);padding:36px 24px}
+  .pillar:last-child{border-bottom:none}
+  .quote{padding:48px 24px}
+  .form-wrap{padding:48px 24px}
+  .opts{gap:8px}
+  .opt{font-size:11px;padding:9px 16px}
+  footer{padding:24px;flex-direction:column;gap:8px;text-align:center}
+}
 </style>
 
-<div class="w">
-<nav class="w-nav">
-  <div class="w-logo">Malaga Wedding Planner</div>
-  <div class="w-nav-right">
-    <div class="w-lang">
-      <button class="w-lang-btn active" onclick="setLang('en',this)">EN</button>
-      <span class="w-lang-sep">·</span>
-      <button class="w-lang-btn" onclick="setLang('es',this)">ES</button>
-      <span class="w-lang-sep">·</span>
-      <button class="w-lang-btn" onclick="setLang('de',this)">DE</button>
-      <span class="w-lang-sep">·</span>
-      <button class="w-lang-btn" onclick="setLang('sv',this)">SV</button>
+<nav>
+  <div class="logo">Malaga Wedding Planner</div>
+  <div class="nav-right">
+    <div class="lang">
+      <button class="lb active" onclick="setLang('en',this)">EN</button>
+      <span class="ls">·</span>
+      <button class="lb" onclick="setLang('es',this)">ES</button>
     </div>
-    <button class="w-nav-cta" id="nav-cta" onclick="document.querySelector('.w-form-wrap').scrollIntoView({behavior:'smooth'})">Start planning</button>
+    <button class="nav-cta" id="ncta" onclick="document.querySelector('.form-wrap').scrollIntoView({behavior:'smooth'})">Start planning</button>
   </div>
 </nav>
 
-<div class="w-hero">
-  <div class="w-hero-bg"></div>
-  <div class="w-hero-overlay"></div>
-  <div class="w-hero-content">
-    <div class="w-eyebrow">Costa del Sol &middot; Marbella &middot; Malaga</div>
-    <h1 id="hero-h1"></h1>
-    <p class="w-hero-sub" id="hero-sub"></p>
-    <button class="w-hero-btn" onclick="document.querySelector('.w-form-wrap').scrollIntoView({behavior:'smooth'})">
-      <span id="hero-btn"></span> <i class="ti ti-arrow-right" aria-hidden="true"></i>
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="hero-eye">Costa del Sol &middot; Marbella &middot; Malaga</div>
+    <h1 id="hh1">Your wedding,<br><em>exactly as<br>you imagined.</em></h1>
+    <p class="hero-sub" id="hsub">We connect you with the finest venues, photographers and artisans on the Costa del Sol, and make sure every detail is taken care of.</p>
+    <button class="hero-btn" onclick="document.querySelector('.form-wrap').scrollIntoView({behavior:'smooth'})">
+      <span id="hbtn">Tell us about your day</span> &rarr;
     </button>
   </div>
 </div>
 
-<div class="w-bridge">
-  <div class="w-bridge-left" id="bridge-left"></div>
-  <div class="w-bridge-right" id="bridge-right"></div>
+<div class="bridge">
+  <div class="bridge-left" id="bl"></div>
+  <div class="bridge-right" id="br"></div>
 </div>
 
-<div class="w-gallery">
-  <div class="w-gimg"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=85&auto=format&fit=crop" alt="" loading="lazy"></div>
-  <div class="w-gimg"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"></div>
-  <div class="w-gimg"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"></div>
+<div class="gallery">
+  <div class="gimg"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=85&auto=format&fit=crop" alt="" loading="lazy"></div>
+  <div class="gimg"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"></div>
+  <div class="gimg"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=85&auto=format&fit=crop" alt="" loading="lazy"></div>
 </div>
 
-<div class="w-pillars">
-  <div class="w-pillar"><span class="w-pillar-word" id="p1w"></span><p class="w-pillar-text" id="p1t"></p></div>
-  <div class="w-pillar"><span class="w-pillar-word" id="p2w"></span><p class="w-pillar-text" id="p2t"></p></div>
-  <div class="w-pillar"><span class="w-pillar-word" id="p3w"></span><p class="w-pillar-text" id="p3t"></p></div>
+<div class="pillars">
+  <div class="pillar"><span class="pillar-word" id="p1w"></span><p class="pillar-text" id="p1t"></p></div>
+  <div class="pillar"><span class="pillar-word" id="p2w"></span><p class="pillar-text" id="p2t"></p></div>
+  <div class="pillar"><span class="pillar-word" id="p3w"></span><p class="pillar-text" id="p3t"></p></div>
 </div>
 
-<div class="w-quote">
-  <div class="w-quote-text" id="qt"></div>
-  <div class="w-quote-attr" id="qa"></div>
+<div class="quote">
+  <div class="quote-text" id="qt"></div>
+  <div class="quote-attr" id="qa"></div>
 </div>
 
-<div class="w-form-wrap">
-  <div class="w-form-eyebrow" id="fey"></div>
-  <div class="w-form-title" id="ftit"></div>
-  <p class="w-form-sub" id="fsub"></p>
-  <div class="w-prog">
-    <div class="w-prog-bar on" id="b1"></div>
-    <div class="w-prog-bar" id="b2"></div>
-    <div class="w-prog-bar" id="b3"></div>
-    <div class="w-prog-bar" id="b4"></div>
+<div class="form-wrap">
+  <div class="form-eye" id="fey"></div>
+  <div class="form-title" id="ftit"></div>
+  <p class="form-sub" id="fsub"></p>
+  <div class="prog">
+    <div class="pbar on" id="b1"></div>
+    <div class="pbar" id="b2"></div>
+    <div class="pbar" id="b3"></div>
+    <div class="pbar" id="b4"></div>
   </div>
-  <div class="w-panel on" id="s1">
-    <div class="w-q" id="q1"></div>
-    <div class="w-opts" id="o1"></div>
-    <div class="w-foot"><span></span><button class="w-next" onclick="go(2)"><span id="cn1"></span> <i class="ti ti-arrow-right" aria-hidden="true"></i></button></div>
+  <div class="panel on" id="s1">
+    <div class="fq" id="q1"></div>
+    <div class="opts" id="o1"></div>
+    <div class="ffoot"><span></span><button class="fnx" onclick="go(2)"><span id="cn1"></span> &rarr;</button></div>
   </div>
-  <div class="w-panel" id="s2">
-    <div class="w-q" id="q2"></div>
-    <div class="w-opts" id="o2"></div>
-    <div class="w-foot"><button class="w-back" id="bk2" onclick="go(1)"></button><button class="w-next" onclick="go(3)"><span id="cn2"></span> <i class="ti ti-arrow-right" aria-hidden="true"></i></button></div>
+  <div class="panel" id="s2">
+    <div class="fq" id="q2"></div>
+    <div class="opts" id="o2"></div>
+    <div class="ffoot"><button class="fbk" id="bk2" onclick="go(1)"></button><button class="fnx" onclick="go(3)"><span id="cn2"></span> &rarr;</button></div>
   </div>
-  <div class="w-panel" id="s3">
-    <div class="w-q" id="q3"></div>
-    <div class="w-opts" id="o3"></div>
-    <div class="w-foot"><button class="w-back" id="bk3" onclick="go(2)"></button><button class="w-next" onclick="go(4)"><span id="cn3"></span> <i class="ti ti-arrow-right" aria-hidden="true"></i></button></div>
+  <div class="panel" id="s3">
+    <div class="fq" id="q3"></div>
+    <div class="opts" id="o3"></div>
+    <div class="ffoot"><button class="fbk" id="bk3" onclick="go(2)"></button><button class="fnx" onclick="go(4)"><span id="cn3"></span> &rarr;</button></div>
   </div>
-  <div class="w-panel" id="s4">
-    <div class="w-q" id="q4"></div>
-    <input class="w-inp" id="iname" type="text">
-    <input class="w-inp" id="iemail" type="email">
-    <input class="w-inp" id="iphone" type="tel">
-    <div class="w-foot"><button class="w-back" id="bk4" onclick="go(3)"></button><button class="w-next" onclick="done()"><span id="csend"></span> <i class="ti ti-send" aria-hidden="true"></i></button></div>
+  <div class="panel" id="s4">
+    <div class="fq" id="q4"></div>
+    <input class="inp" id="iname" type="text">
+    <input class="inp" id="iemail" type="email">
+    <input class="inp" id="iphone" type="tel">
+    <div class="ffoot"><button class="fbk" id="bk4" onclick="go(3)"></button><button class="fnx" onclick="done()"><span id="csend"></span> &rarr;</button></div>
   </div>
-  <div class="w-confirm" id="conf">
-    <div class="w-confirm-icon"><i class="ti ti-heart" aria-hidden="true"></i></div>
+  <div class="confirm" id="conf">
+    <div class="confirm-icon">&#9825;</div>
     <h3 id="cfh"></h3>
     <p id="cfp"></p>
   </div>
 </div>
 
-<div class="w-footer">
-  <div class="w-footer-logo">Malaga Wedding Planner</div>
-  <div class="w-footer-copy">Costa del Sol, Spain</div>
-</div>
-</div>
+<footer>
+  <div class="footer-logo">Malaga Wedding Planner</div>
+  <div class="footer-copy">Costa del Sol, Spain &middot; malagaweddingplanner.com</div>
+</footer>
 
 <script>
 var L = {
-  en: {
+  en:{
     cta:"Start planning",
     h1:"Your wedding,<br><em>exactly as<br>you imagined.</em>",
     sub:"We connect you with the finest venues, photographers and artisans on the Costa del Sol, and make sure every detail is taken care of.",
     btn:"Tell us about your day",
     bl:"We know<br>the people<br>who make<br><em>magic happen.</em>",
-    br:"<p>The Costa del Sol is one of Europe's most beautiful places to get married. But finding the right people takes time and local knowledge.</p><p>That's where we come in. We've spent years building relationships with the very best professionals in Malaga and Marbella.</p>",
+    br:"<p>The Costa del Sol is one of Europe's most beautiful places to get married. But finding the right people takes time and local knowledge.</p><p>That's where we come in. We've spent years building relationships with the very best professionals in Malaga and Marbella, so you don't have to start from scratch.</p>",
     p1w:"Curated",p1t:"Every venue, photographer and florist we work with has been personally selected. Quality is not negotiable.",
     p2w:"Local",p2t:"We live and breathe the Costa del Sol. We know which venues get the best evening light, and who to call when things need to happen fast.",
-    p3w:"Personal",p3t:"No templates, no packages. We listen to your vision and build something entirely yours.",
+    p3w:"Personal",p3t:"No templates, no packages. We listen to your vision and build something entirely, unmistakably yours.",
     qt:"We had no idea where to begin. One conversation later, everything fell into place.",
     qa:"Sarah and Tom, married in Marbella, September 2024",
     fey:"Let's talk about your wedding",
     ftit:"Every great day<br>starts with <em>a conversation.</em>",
-    fsub:"Tell us a little about what you have in mind. We'll get back to you within 24 hours with ideas and a plan.",
+    fsub:"Tell us a little about what you have in mind. We will get back to you within 24 hours with ideas and a plan.",
     q1:"When are you thinking of getting married?",
     o1:["This year","Spring 2026","Summer 2026","Autumn 2026","2027 or later","We are still exploring"],
     q2:"How many guests are you imagining?",
@@ -194,16 +228,16 @@ var L = {
     cfh:"We will be in touch very soon.",
     cfp:"Thank you for reaching out. We are already looking forward to helping you make your day unforgettable."
   },
-  es: {
+  es:{
     cta:"Empezar",
     h1:"Tu boda,<br><em>exactamente<br>como la sonaste.</em>",
-    sub:"Te conectamos con los mejores venues, fotografos y artesanos de la Costa del Sol, y nos aseguramos de que cada detalle este cuidado.",
+    sub:"Te conectamos con los mejores venues, fotografos y profesionales de la Costa del Sol, y nos aseguramos de que cada detalle este cuidado.",
     btn:"Cuentanos tu historia",
     bl:"Conocemos<br>a las personas<br>que hacen<br><em>la magia posible.</em>",
-    br:"<p>La Costa del Sol es uno de los lugares mas hermosos de Europa para casarse. Pero encontrar a las personas adecuadas requiere tiempo y conocimiento local.</p><p>Llevamos anos construyendo relaciones con los mejores profesionales de Malaga y Marbella, para que tu no tengas que empezar desde cero.</p>",
+    br:"<p>La Costa del Sol es uno de los lugares mas hermosos de Europa para casarse. Pero encontrar a las personas adecuadas requiere tiempo y conocimiento local.</p><p>Llevamos anos construyendo relaciones con los mejores profesionales de Malaga y Marbella, para que no tengas que empezar desde cero.</p>",
     p1w:"Seleccion",p1t:"Cada venue, fotografo y florista con quien trabajamos ha sido elegido personalmente. La calidad no es negociable.",
     p2w:"Local",p2t:"Vivimos y respiramos la Costa del Sol. Sabemos que venues tienen la mejor luz al atardecer y a quien llamar cuando algo necesita resolverse rapido.",
-    p3w:"Personal",p3t:"Sin plantillas ni paquetes cerrados. Escuchamos tu vision y creamos algo unico e inconfundiblemente vuestro.",
+    p3w:"Personal",p3t:"Sin plantillas ni paquetes. Escuchamos tu vision y creamos algo unico e inconfundiblemente vuestro.",
     qt:"No sabiamos por donde empezar. Una conversacion despues, todo encajo.",
     qa:"Sarah y Tom, casados en Marbella, septiembre de 2024",
     fey:"Hablemos de vuestra boda",
@@ -220,109 +254,55 @@ var L = {
     back:"Volver",cont:"Continuar",send:"Enviar consulta",
     cfh:"Nos ponemos en contacto muy pronto.",
     cfp:"Gracias por escribirnos. Ya estamos pensando en como hacer vuestro dia inolvidable."
-  },
-  de: {
-    cta:"Jetzt planen",
-    h1:"Eure Hochzeit,<br><em>genau wie ihr<br>es euch vorgestellt habt.</em>",
-    sub:"Wir verbinden euch mit den besten Locations, Fotografen und Floristen an der Costa del Sol und sorgen dafuer, dass jedes Detail stimmt.",
-    btn:"Erzahlt uns von eurem Tag",
-    bl:"Wir kennen<br>die Menschen,<br>die<br><em>Magie moeglich machen.</em>",
-    br:"<p>Die Costa del Sol ist einer der schoensten Orte Europas fuer eine Hochzeit. Aber die richtigen Menschen zu finden erfordert Zeit und lokales Wissen.</p><p>Genau dort kommen wir ins Spiel. Wir haben jahrelang Beziehungen zu den besten Profis in Malaga und Marbella aufgebaut.</p>",
-    p1w:"Kuratiert",p1t:"Jede Location, jeder Fotograf und jede Floristin wurde persoenlich ausgewaehlt. Qualitaet ist nicht verhandelbar.",
-    p2w:"Lokal",p2t:"Wir leben und atmen die Costa del Sol. Wir wissen, welche Locations das beste Abendlicht haben und wen man anruft, wenn es schnell gehen muss.",
-    p3w:"Persoenlich",p3t:"Keine Vorlagen, keine Pakete. Wir hoeren eurer Vision zu und schaffen etwas, das unverwechselbar euer eigenes ist.",
-    qt:"Wir wussten nicht, wo wir anfangen sollten. Nach einem Gespraech fiel alles an seinen Platz.",
-    qa:"Sarah und Tom, verheiratet in Marbella, September 2024",
-    fey:"Erzahlt uns von eurer Hochzeit",
-    ftit:"Jeder grossartige Tag<br>beginnt mit <em>einem Gespraech.</em>",
-    fsub:"Erzahlt uns ein bisschen, was ihr euch vorstellt. Wir melden uns innerhalb von 24 Stunden mit Ideen und einem Plan.",
-    q1:"Wann denkt ihr ans Heiraten?",
-    o1:["Dieses Jahr","Fruehjahr 2026","Sommer 2026","Herbst 2026","2027 oder spaeter","Wir erkunden noch"],
-    q2:"Wie viele Gaeste stellt ihr euch vor?",
-    o2:["Intim, bis 30","Mittel, 30 bis 80","Gross, 80 bis 150","Grand, ueber 150"],
-    q3:"Was ist euer ungefaehres Budget?",
-    o3:["Unter 15.000 EUR","15.000 bis 35.000 EUR","35.000 bis 75.000 EUR","75.000 bis 150.000 EUR","Kein Limit, nur Perfektion"],
-    q4:"Wie koennen wir euch erreichen?",
-    pname:"Euer Name",pemail:"E-Mail-Adresse",pphone:"WhatsApp oder Telefon (optional)",
-    back:"Zurueck",cont:"Weiter",send:"Anfrage senden",
-    cfh:"Wir melden uns sehr bald.",
-    cfp:"Danke fuer eure Nachricht. Wir freuen uns schon darauf, mehr ueber euren Tag zu erfahren."
-  },
-  sv: {
-    cta:"Borja planera",
-    h1:"Ert brollop,<br><em>precis som<br>ni forestallt er.</em>",
-    sub:"Vi kopplar ihop er med de finaste arenorna, fotograferna och hantverkarna pa Costa del Sol och ser till att varje detalj ar omhandertagen.",
-    btn:"Beratta om er dag",
-    bl:"Vi kanner<br>de manniskor<br>som skapar<br><em>magi.</em>",
-    br:"<p>Costa del Sol ar en av Europas vackraste platser att gifta sig pa. Men att hitta ratt personer kraver tid och lokal kunskap.</p><p>Det ar dar vi kommer in. Vi har i manga ar byggt relationer med de basta proffsen i Malaga och Marbella.</p>",
-    p1w:"Utvalt",p1t:"Varje venue, fotograf och blomsterdekorator vi arbetar med har valts ut personligen. Kvalitet ar inte forhandlingsbart.",
-    p2w:"Lokalt",p2t:"Vi lever och andas Costa del Sol. Vi vet vilka platser som har det basta kvallsljuset och vem man ringer nar saker maste handa snabbt.",
-    p3w:"Personligt",p3t:"Inga mallar, inga paket. Vi lyssnar pa er vision och skapar nagot som ar helt och hallet ert eget.",
-    qt:"Vi visste inte var vi skulle borja. Efter ett samtal foll allt pa plats.",
-    qa:"Sarah och Tom, gifta i Marbella, september 2024",
-    fey:"Lat oss prata om ert brollop",
-    ftit:"Varje fantastisk dag<br>borjar med <em>ett samtal.</em>",
-    fsub:"Beratta lite om vad ni har i atanke. Vi aterkommer inom 24 timmar med ideer och en plan.",
-    q1:"Nar tanker ni gifta er?",
-    o1:["I ar","Varen 2026","Sommaren 2026","Hosten 2026","2027 eller senare","Vi utforskar fortfarande"],
-    q2:"Hur manga gaster forestaller ni er?",
-    o2:["Intimt, upp till 30","Mellanstor, 30 till 80","Stor, 80 till 150","Stor, fler an 150"],
-    q3:"Vad ar er ungefарliga budget?",
-    o3:["Under 15 000 EUR","15 000 till 35 000 EUR","35 000 till 75 000 EUR","75 000 till 150 000 EUR","Ingen grans, bara perfektion"],
-    q4:"Hur nar vi er?",
-    pname:"Ert namn",pemail:"E-postadress",pphone:"WhatsApp eller telefon (valfritt)",
-    back:"Tillbaka",cont:"Fortsatt",send:"Skicka forfragan",
-    cfh:"Vi hor av oss valdigt snart.",
-    cfp:"Tack for att ni horde av er. Vi ser redan fram emot att hora mer om er dag."
   }
 };
 
-function setLang(l, btn) {
-  document.querySelectorAll('.w-lang-btn').forEach(function(b){b.classList.remove('active');});
+function setLang(l,btn){
+  document.querySelectorAll('.lb').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
-  var t = L[l];
-  document.getElementById('nav-cta').textContent = t.cta;
-  document.getElementById('hero-h1').innerHTML = t.h1;
-  document.getElementById('hero-sub').textContent = t.sub;
-  document.getElementById('hero-btn').textContent = t.btn;
-  document.getElementById('bridge-left').innerHTML = t.bl;
-  document.getElementById('bridge-right').innerHTML = t.br;
-  document.getElementById('p1w').textContent = t.p1w;
-  document.getElementById('p1t').textContent = t.p1t;
-  document.getElementById('p2w').textContent = t.p2w;
-  document.getElementById('p2t').textContent = t.p2t;
-  document.getElementById('p3w').textContent = t.p3w;
-  document.getElementById('p3t').textContent = t.p3t;
-  document.getElementById('qt').textContent = t.qt;
-  document.getElementById('qa').textContent = t.qa;
-  document.getElementById('fey').textContent = t.fey;
-  document.getElementById('ftit').innerHTML = t.ftit;
-  document.getElementById('fsub').textContent = t.fsub;
-  document.getElementById('q1').textContent = t.q1;
-  document.getElementById('q2').textContent = t.q2;
-  document.getElementById('q3').textContent = t.q3;
-  document.getElementById('q4').textContent = t.q4;
-  document.getElementById('iname').placeholder = t.pname;
-  document.getElementById('iemail').placeholder = t.pemail;
-  document.getElementById('iphone').placeholder = t.pphone;
-  document.getElementById('bk2').textContent = t.back;
-  document.getElementById('bk3').textContent = t.back;
-  document.getElementById('bk4').textContent = t.back;
-  document.getElementById('cn1').textContent = t.cont;
-  document.getElementById('cn2').textContent = t.cont;
-  document.getElementById('cn3').textContent = t.cont;
-  document.getElementById('csend').textContent = t.send;
-  document.getElementById('cfh').textContent = t.cfh;
-  document.getElementById('cfp').textContent = t.cfp;
+  var t=L[l];
+  document.getElementById('ncta').textContent=t.cta;
+  document.getElementById('hh1').innerHTML=t.h1;
+  document.getElementById('hsub').textContent=t.sub;
+  document.getElementById('hbtn').textContent=t.btn;
+  document.getElementById('bl').innerHTML=t.bl;
+  document.getElementById('br').innerHTML=t.br;
+  document.getElementById('p1w').textContent=t.p1w;
+  document.getElementById('p1t').textContent=t.p1t;
+  document.getElementById('p2w').textContent=t.p2w;
+  document.getElementById('p2t').textContent=t.p2t;
+  document.getElementById('p3w').textContent=t.p3w;
+  document.getElementById('p3t').textContent=t.p3t;
+  document.getElementById('qt').textContent=t.qt;
+  document.getElementById('qa').textContent=t.qa;
+  document.getElementById('fey').textContent=t.fey;
+  document.getElementById('ftit').innerHTML=t.ftit;
+  document.getElementById('fsub').textContent=t.fsub;
+  document.getElementById('q1').textContent=t.q1;
+  document.getElementById('q2').textContent=t.q2;
+  document.getElementById('q3').textContent=t.q3;
+  document.getElementById('q4').textContent=t.q4;
+  document.getElementById('iname').placeholder=t.pname;
+  document.getElementById('iemail').placeholder=t.pemail;
+  document.getElementById('iphone').placeholder=t.pphone;
+  document.getElementById('bk2').textContent=t.back;
+  document.getElementById('bk3').textContent=t.back;
+  document.getElementById('bk4').textContent=t.back;
+  document.getElementById('cn1').textContent=t.cont;
+  document.getElementById('cn2').textContent=t.cont;
+  document.getElementById('cn3').textContent=t.cont;
+  document.getElementById('csend').textContent=t.send;
+  document.getElementById('cfh').textContent=t.cfh;
+  document.getElementById('cfp').textContent=t.cfp;
   [1,2,3].forEach(function(n){
-    var c = document.getElementById('o'+n);
-    c.innerHTML = '';
+    var c=document.getElementById('o'+n);
+    c.innerHTML='';
     t['o'+n].forEach(function(op){
-      var b = document.createElement('button');
-      b.className = 'w-opt';
-      b.textContent = op;
-      b.onclick = function(){
-        c.querySelectorAll('.w-opt').forEach(function(x){x.classList.remove('on');});
+      var b=document.createElement('button');
+      b.className='opt';
+      b.textContent=op;
+      b.onclick=function(){
+        c.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on');});
         b.classList.add('on');
       };
       c.appendChild(b);
@@ -330,8 +310,8 @@ function setLang(l, btn) {
   });
 }
 
-function go(n) {
-  for (var i=1;i<=4;i++){
+function go(n){
+  for(var i=1;i<=4;i++){
     document.getElementById('s'+i).classList.remove('on');
     document.getElementById('b'+i).classList.remove('on');
   }
@@ -339,13 +319,13 @@ function go(n) {
   document.getElementById('b'+n).classList.add('on');
 }
 
-function done() {
-  for (var i=1;i<=4;i++){
+function done(){
+  for(var i=1;i<=4;i++){
     document.getElementById('s'+i).classList.remove('on');
     document.getElementById('b'+i).classList.remove('on');
   }
   document.getElementById('conf').classList.add('on');
 }
 
-setLang('en', document.querySelector('.w-lang-btn.active'));
+setLang('en',document.querySelector('.lb.active'));
 </script>
